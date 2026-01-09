@@ -1,0 +1,2 @@
+Barber: 3
+BarberShop: 0

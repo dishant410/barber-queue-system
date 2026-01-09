@@ -1,0 +1,325 @@
+/* New Dark Theme Home Page Styles */
+.home-container-new {
+  min-height: 100vh;
+  background: #1a1a1a;
+  color: #e5e5e5;
+  padding: 40px 20px;
+}
+
+.home-content-new {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-header-new {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.6s ease;
+}
+
+.app-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.tagline-new {
+  font-size: 1.5rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Role Selection Cards */
+.role-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.role-card {
+  background: #2a2a2a;
+  border: 2px solid #404040;
+  border-radius: 20px;
+  padding: 40px 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-10px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
+.role-card:hover::before {
+  opacity: 0.1;
+}
+
+.role-card.customer-role:hover::before {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.role-card.barber-role:hover::before {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.role-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.customer-role .role-icon {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+.barber-role .role-icon {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.register-role .role-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+}
+
+.role-card.register-role:hover::before {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.role-card h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #e5e5e5;
+  position: relative;
+  z-index: 1;
+}
+
+.role-description {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.customer-role .check-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.barber-role .check-icon {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Home Footer - Notice Card */
+.home-footer {
+  max-width: 1200px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+}
+
+.notice-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%);
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.notice-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.notice-content h3 {
+  font-size: 1.3rem;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.notice-content p {
+  color: #9ca3af;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.register-link,
+.email-link {
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover,
+.email-link:hover {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.5rem;
+  }
+
+  .tagline-new {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .role-selection {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .role-card {
+    padding: 30px 24px;
+  }
+
+  .role-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .role-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .role-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .notice-card {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .notice-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .notice-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .notice-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .notice-content p {
+    font-size: 0.9rem;
+  }
+}
